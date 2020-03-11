@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import Vote from "./vote-now.png";
-import Bar from "./status-bar2.png";
+import Bar from "./status-bar2.svg";
 
 function Header() {
   return (

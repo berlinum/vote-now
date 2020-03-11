@@ -7,7 +7,7 @@ function Vote() {
     <div className="container">
       <Link to="/result">
         <button type="button" className="button__vote">
-          Result
+          Vote
         </button>
       </Link>
     </div>
