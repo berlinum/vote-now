@@ -1,17 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Vote.css";
+import Button from "../components/Button";
 
 function Vote() {
-  return (
-    <div className="container">
-      <Link to="/result">
-        <button type="button" className="button__vote">
-          Vote
-        </button>
-      </Link>
-    </div>
-  );
+  return <Button button="Vote" class="button__vote" link="/result" />;
 }
-
 export default Vote;

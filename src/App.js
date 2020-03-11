@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import New from "./pages/New";
 import Vote from "./pages/Vote";
 import Result from "./pages/Result";
+import Question from "./components/Question";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="layout">
         <Header />
         <main className="main">
+          <Question />
           <Switch>
             <Route exact path="/">
               <New />

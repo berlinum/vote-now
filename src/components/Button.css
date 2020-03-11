@@ -1,0 +1,39 @@
+.button__container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 90px;
+  justify-content: center;
+}
+
+.button__new {
+  width: 178px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff3b30;
+  color: #fffdfd;
+  font-family: SF;
+}
+
+.button__vote {
+  width: 178px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff3b30;
+  color: #fffdfd;
+  font-family: SF;
+}
+
+.button__result {
+  width: 216px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff3b30;
+  color: #fffdfd;
+  font-family: SF;
+}
