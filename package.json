@@ -19,6 +19,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
