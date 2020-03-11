@@ -7,6 +7,10 @@
 .logo {
   width: 135px;
   height: 90px;
-  padding-top: 44px;
   padding-bottom: 32px;
+}
+
+.status-bar {
+  width: 100%;
+  margin: 0;
 }
