@@ -1,12 +1,29 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
+import New from "./pages/New";
+import Vote from "./pages/Vote";
+import Result from "./pages/Result";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-    </div>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <New />
+          </Route>
+          <Route path="/vote">
+            <Vote />
+          </Route>
+          <Route path="/result">
+            <Result />
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   );
 }
 
