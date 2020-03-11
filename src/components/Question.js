@@ -1,10 +1,10 @@
 import React from "react";
 import "./Question.css";
 
-function Question() {
+function Question(props) {
   return (
     <form className="question__box">
-      <label className="question__label">Your question:</label>
+      <label className="question__label">{props.title}</label>
       <input
         className="question__input"
         type="text"

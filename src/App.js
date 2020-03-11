@@ -13,7 +13,6 @@ function App() {
       <div className="layout">
         <Header />
         <main className="main">
-          <Question />
           <Switch>
             <Route exact path="/">
               <New />
