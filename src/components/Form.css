@@ -1,7 +1,6 @@
 .form__box {
   display: flex;
   flex-direction: column;
-  outline: none;
 }
 .question__label {
   align-self: flex-start;
@@ -21,10 +20,12 @@
   font-family: SF;
   font-size: 20px;
   padding-left: 20px;
-  box-sizing: border-box;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-  /* outline: orange solid;
-  border-radius: 10px; */
+}
+
+.question__input:focus {
+  outline: orange;
+  box-shadow: 0 0 3px 2px orange;
 }
 
 .answers-box {
@@ -46,6 +47,11 @@
   padding-left: 29px;
   margin: 19px 32px 0 33px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.answer__input:focus {
+  outline: orange;
+  box-shadow: 0 0 3px 2px orange;
 }
 
 .answers__label {
