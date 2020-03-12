@@ -25,8 +25,8 @@
 }
 
 .question__input:focus {
-  outline: orange;
-  box-shadow: 0 0 3px 2px orange;
+  outline: #007aff;
+  box-shadow: 0 0 3px 2px #007aff;
 }
 
 .answers-box {
@@ -52,8 +52,8 @@
 }
 
 .answer__input:focus {
-  outline: orange;
-  box-shadow: 0 0 3px 2px orange;
+  outline: #007aff;
+  box-shadow: 0 0 3px 2px #007aff;
 }
 
 .answers__label {
@@ -62,4 +62,8 @@
   font-size: 30px;
   font-family: SF;
   color: #707070;
+}
+
+::placeholder {
+  color: #9a9a9a;
 }
