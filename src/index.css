@@ -3,6 +3,11 @@
   src: url("/fonts/SF-Pro-Display-Regular.otf");
 }
 
+@font-face {
+  font-family: "SF italic";
+  src: url("/fonts/SF-Pro-Display-RegularItalic.otf");
+}
+
 body {
   display: flex;
   margin: 0;

@@ -14,7 +14,7 @@ function Form(props) {
     answerThree: answerThree
   };
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     props.onSubmit(poll);
   }
@@ -34,7 +34,7 @@ function Form(props) {
       <input
         className="answer__input"
         type="text"
-        placeholder="Lager"
+        placeholder="Answer..."
         value={answerOne}
         onChange={event => {
           setAnswerOne(event.target.value);
@@ -43,7 +43,7 @@ function Form(props) {
       <input
         className="answer__input"
         type="text"
-        placeholder="Malt"
+        placeholder="Answer..."
         value={answerTwo}
         onChange={event => {
           setAnswerTwo(event.target.value);
@@ -52,13 +52,13 @@ function Form(props) {
       <input
         className="answer__input"
         type="text"
-        placeholder="Ale"
+        placeholder="Answer..."
         value={answerThree}
         onChange={event => {
           setAnswerThree(event.target.value);
         }}
       ></input>
-      <Button buttonName="Create poll" class="button__new" />
+      <Button buttonName="Create poll" class="button" />
     </form>
   );
 }
