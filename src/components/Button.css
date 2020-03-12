@@ -5,9 +5,10 @@
   justify-content: center;
 }
 
-.button__new {
-  width: 178px;
+.button {
+  min-width: 178px;
   height: 45px;
+  padding: 0 44px;
   font-size: 20px;
   border: none;
   border-radius: 23px;
@@ -15,28 +16,11 @@
   color: #fffdfd;
   font-family: SF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
-.button__vote {
-  width: 178px;
-  height: 45px;
-  font-size: 20px;
-  border: none;
-  border-radius: 23px;
-  background-color: #ff3b30;
-  color: #fffdfd;
-  font-family: SF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.button__result {
-  width: 216px;
-  height: 45px;
-  font-size: 20px;
-  border: none;
-  border-radius: 23px;
-  background-color: #ff3b30;
-  color: #fffdfd;
-  font-family: SF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+.button:hover {
+  color: #ff3b30;
+  background-color: #fffdfd;
+  cursor: pointer;
 }

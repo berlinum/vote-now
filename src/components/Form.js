@@ -14,9 +14,16 @@ function Form(props) {
     answerThree: answerThree
   };
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     props.onSubmit(poll);
+    await fetch("http://localhost:4000/polls", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8"
+      },
+      body: JSON.stringify(poll)
+    });
   }
   return (
     <form className="form__box" onSubmit={handleSubmit}>
@@ -34,7 +41,7 @@ function Form(props) {
       <input
         className="answer__input"
         type="text"
-        placeholder="Lager"
+        placeholder="Answer 1"
         value={answerOne}
         onChange={event => {
           setAnswerOne(event.target.value);
@@ -43,7 +50,7 @@ function Form(props) {
       <input
         className="answer__input"
         type="text"
-        placeholder="Malt"
+        placeholder="Answer 2"
         value={answerTwo}
         onChange={event => {
           setAnswerTwo(event.target.value);
@@ -52,13 +59,13 @@ function Form(props) {
       <input
         className="answer__input"
         type="text"
-        placeholder="Ale"
+        placeholder="Answer 3"
         value={answerThree}
         onChange={event => {
           setAnswerThree(event.target.value);
         }}
       ></input>
-      <Button buttonName="Create poll" class="button__new" />
+      <Button buttonName="Create poll" class="button" />
     </form>
   );
 }
