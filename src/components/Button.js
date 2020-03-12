@@ -7,7 +7,7 @@ function Button(props) {
     <div className="button__container">
       <Link to={props.link}>
         <button type="button" className={props.class}>
-          {props.button}
+          {props.buttonName}
         </button>
       </Link>
     </div>
