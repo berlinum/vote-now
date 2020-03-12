@@ -1,17 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Vote.css";
+import Question from "../components/Question";
+import AnswersBox from "../components/AnswersBox";
+import LableAnswers from "../components/LableAnswers";
+import Answer from "../components/Answer";
+import Button from "../components/Button";
 
 function Vote() {
   return (
-    <div className="container">
-      <Link to="/result">
-        <button type="button" className="button__vote">
-          Result
-        </button>
-      </Link>
-    </div>
+    <>
+      <Question title="Question:" />
+      <AnswersBox>
+        <LableAnswers title="Your answer:" />
+        <Answer />
+        <Answer />
+        <Answer />
+      </AnswersBox>
+      <Button button="Vote" class="button__vote" link="/result" />;
+    </>
   );
 }
-
 export default Vote;

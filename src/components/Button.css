@@ -1,0 +1,42 @@
+.button__container {
+  display: flex;
+  width: 100%;
+  margin: 90px 0;
+  justify-content: center;
+}
+
+.button__new {
+  width: 178px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff3b30;
+  color: #fffdfd;
+  font-family: SF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button__vote {
+  width: 178px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff3b30;
+  color: #fffdfd;
+  font-family: SF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button__result {
+  width: 216px;
+  height: 45px;
+  font-size: 20px;
+  border: none;
+  border-radius: 23px;
+  background-color: #ff3b30;
+  color: #fffdfd;
+  font-family: SF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}

@@ -1,14 +1,13 @@
 @font-face {
-  font-family: "SF pro";
-  src: url("/fonts/SF-Pro-Text-Regular.otf");
-  font-weight: 100;
-  font-style: normal;
+  font-family: "SF";
+  src: url("/fonts/SF-Pro-Display-Regular.otf");
 }
 
 body {
+  display: flex;
   margin: 0;
   background-color: #ffffff;
   height: 100vh;
   color: #707070;
-  font-family: SF pro;
+  font-family: SF;
 }

@@ -5,24 +5,27 @@ import Header from "./components/Header";
 import New from "./pages/New";
 import Vote from "./pages/Vote";
 import Result from "./pages/Result";
+import Question from "./components/Question";
 
 function App() {
   return (
     <Router>
-      <Header />
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <New />
-          </Route>
-          <Route path="/vote">
-            <Vote />
-          </Route>
-          <Route path="/result">
-            <Result />
-          </Route>
-        </Switch>
-      </main>
+      <div className="layout">
+        <Header />
+        <main className="main">
+          <Switch>
+            <Route exact path="/">
+              <New />
+            </Route>
+            <Route path="/vote">
+              <Vote />
+            </Route>
+            <Route path="/result">
+              <Result />
+            </Route>
+          </Switch>
+        </main>
+      </div>
     </Router>
   );
 }

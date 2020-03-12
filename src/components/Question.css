@@ -1,0 +1,25 @@
+.question__box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.question__label {
+  margin-left: 34px;
+  font-size: 30px;
+  font-family: SF;
+  color: #707070;
+}
+.question__input {
+  box-sizing: border-box;
+  width: 310px;
+  height: 45px;
+  margin: 17px 33px 0 32px;
+  background-color: #e1e1e3;
+  border: none;
+  border-radius: 10px;
+  font-family: SF;
+  font-size: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
