@@ -1,23 +1,24 @@
-import React from "react";
-import "./Header.css";
-import Vote from "./vote-now.png";
-import Bar1 from "./status-bar-time.svg";
-import Bar2 from "./status-bar-battery.svg";
+import React from 'react';
+import styled from '@emotion/styled';
+import StatusBar from './StatusBar';
+import Logo from './Logo';
 
-function Header() {
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 40vw;
+  margin-bottom: 32px;
+`;
+
+function AppHeader() {
   return (
-    <header className="header">
-      <div className="status-bar">
-        <img className="status-bar-time" src={Bar1} alt="status bar time"></img>
-        <img
-          className="status-bar-battery"
-          src={Bar2}
-          alt="status bar battery"
-        ></img>
-      </div>
-      <img className="logo" src={Vote} alt="logo vote now"></img>
-    </header>
+    <Header>
+      <StatusBar />
+      <Logo />
+    </Header>
   );
 }
 
-export default Header;
+export default AppHeader;

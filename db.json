@@ -1,127 +1,42 @@
 {
   "polls": [
     {
-      "id": 1,
-      "question": "What kind of beer do you like?",
-      "answerOne": "Lager",
-      "answerTwo": "Malt",
-      "answerThree": "Ale"
+      "question": "wedw",
+      "answerOne": "wed",
+      "answerTwo": "wedwrtg",
+      "answerThree": "w434t35g",
+      "votes": [],
+      "id": 1
     },
     {
-      "id": 2,
-      "question": "How much is the cat?",
-      "answerOne": "15$",
-      "answerTwo": "15 Pounds",
-      "answerThree": "199 bucks"
+      "question": "wedwervwe",
+      "answerOne": "wedvedvdfv",
+      "answerTwo": "wedwrtg",
+      "answerThree": "w434t35gsd",
+      "votes": [
+        "answerTwo"
+      ],
+      "id": 2
     },
     {
-      "question": "How much is the dog?",
-      "answerOne": "25$",
-      "answerTwo": "15 Pounds",
-      "answerThree": "199 bucks",
+      "question": "wed",
+      "answerOne": "lküpl",
+      "answerTwo": "kmoppß",
+      "answerThree": "lkmpoü",
+      "votes": [
+        "answerOne"
+      ],
       "id": 3
     },
     {
-      "test": "test",
+      "question": "AAAAAA",
+      "answerOne": "123",
+      "answerTwo": "234",
+      "answerThree": "345",
+      "votes": [
+        "answerTwo"
+      ],
       "id": 4
-    },
-    {
-      "question": "dfjasdlkfj",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "id": 5
-    },
-    {
-      "question": "TEST",
-      "answerOne": "11111",
-      "answerTwo": "2222",
-      "answerThree": "33333",
-      "id": 6
-    },
-    {
-      "question": "dsfkljjasdf",
-      "answerOne": "saldkfjja",
-      "answerTwo": "slödk",
-      "answerThree": "sldkfjaölalsdfjsldfjsaldkf",
-      "id": 7
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "id": 8
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "id": 9
-    },
-    {
-      "question": "sdfsadfasd",
-      "answerOne": "sdfs",
-      "answerTwo": "sdfasd",
-      "answerThree": "sdfasd",
-      "id": 10
-    },
-    {
-      "question": "sdf",
-      "answerOne": "sdf",
-      "answerTwo": "sadf",
-      "answerThree": "sdf",
-      "id": 11
-    },
-    {
-      "question": "sfer",
-      "answerOne": "asefawef",
-      "answerTwo": "yefawe",
-      "answerThree": "awefawef",
-      "id": 12
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "id": 13
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "id": 14
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "id": 15
-    },
-    {
-      "question": "1111111111111",
-      "answerOne": "234",
-      "answerTwo": "2342",
-      "answerThree": "2342423423423",
-      "id": 16
-    },
-    {
-      "question": "1111111111111",
-      "answerOne": "234",
-      "answerTwo": "2342",
-      "answerThree": "2342423423423",
-      "id": 17
-    },
-    {
-      "question": "1111111111111",
-      "answerOne": "234",
-      "answerTwo": "2342",
-      "answerThree": "2342423423423",
-      "id": 18
     }
   ]
 }

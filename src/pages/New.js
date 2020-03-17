@@ -1,25 +1,20 @@
-import React from "react";
-import "./New.css";
-import Form from "../components/Form";
+import React from 'react';
+import AppForm from '../components/AppForm';
 
 function New() {
   async function handleSubmit(poll) {
-    const response = await fetch(
-      process.env.REACT_APP_POLLS_API ||
-        "https://my-json-server.typicode.com/berlinum/vote-now/polls",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(poll)
-      }
-    );
+    const response = await fetch('http://localhost:4000/polls', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(poll)
+    });
     const createdPool = await response.json();
     alert(`Created a new poll with ID ${createdPool.id}`);
   }
   return (
-    <Form
+    <AppForm
       question="Your question:"
       answers="Answer options:"
       onSubmit={handleSubmit}
