@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
+import AppHeader from './components/AppHeader';
 import New from './pages/New';
 import Vote from './pages/Vote';
 import Result from './pages/Result';
 import styled from '@emotion/styled';
 import GlobalStyles from './GlobalStyles';
 import { ThemeProvider } from 'emotion-theming';
-import light from './thems/light';
+import light from './themes/light';
+import dark from './themes/dark';
 
 const Main = styled.main`
   display: flex;
@@ -22,11 +23,14 @@ const Section = styled.section`
 `;
 
 function App() {
+  const [theme, setTheme] = React.useState(dark);
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={theme}>
       <Router>
         <GlobalStyles />
-        <Header />
+        <AppHeader
+          onSwitchButtonClick={() => setTheme(theme === dark ? light : dark)}
+        />
         <Main>
           <Section>
             <Switch>

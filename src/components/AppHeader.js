@@ -8,15 +8,27 @@ const Header = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 140px;
+  height: 160px;
   margin-bottom: 32px;
 `;
 
-function AppHeader() {
+const SwitchColorButton = styled.button`
+  border: none;
+  background: white;
+  border-radius: 50%;
+  font-size: 30px;
+`;
+
+function AppHeader({ onSwitchButtonClick }) {
   return (
     <Header>
       <StatusBar />
       <Logo />
+      <SwitchColorButton onClick={onSwitchButtonClick}>
+        <span role="img" aria-label="switch">
+          🌗
+        </span>
+      </SwitchColorButton>
     </Header>
   );
 }
