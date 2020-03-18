@@ -34,9 +34,18 @@
       "answerTwo": "234",
       "answerThree": "345",
       "votes": [
-        "answerTwo"
+        "answerTwo",
+        "answerThree"
       ],
       "id": 4
+    },
+    {
+      "question": "How much is the cat?",
+      "answerOne": "15$",
+      "answerTwo": "15 Pounds",
+      "answerThree": "199 bucks",
+      "votes": [],
+      "id": 5
     }
   ]
 }

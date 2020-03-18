@@ -2,17 +2,31 @@ import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import Button from '../components/Button';
 import Form from '../components/Form';
+import RadioInput from '../components/RadioInput';
 import styled from '@emotion/styled';
 
-const Label = styled.label`
-  display: block;
+const LabelQuestion = styled.label`
   align-self: flex-start;
+  margin-left: 34px;
   font-size: 30px;
   font-family: SF;
   color: #707070;
-  &::placeholder {
-    color: #9a9a9a;
-  }
+`;
+
+const Question = styled.div`
+  box-sizing: border-box;
+  min-width: 310px;
+  height: 45px;
+  margin: 17px 33px 0 32px;
+  padding: 20px;
+  color: #9a9a9a;
+  background-color: #e1e1e3;
+  border: none;
+  font-family: 'SF italic';
+  font-size: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  align-self: center;
 `;
 
 function Vote() {
@@ -46,39 +60,22 @@ function Vote() {
     history.push(`/polls/${poll.id}`);
   }
 
+  const options = ['answerOne', 'answerTwo', 'answerThree'];
+
   return (
     <Form onSubmit={handleSubmit}>
-      <h2>{poll?.question}</h2>
-      <Label>
-        <input
-          type="radio"
-          name="answer"
-          value="answerOne"
-          checked={answer === 'answerOne'}
+      <LabelQuestion>Question:</LabelQuestion>
+      <Question>{poll?.question}</Question>
+      {options.map(option => (
+        <RadioInput
+          key={option}
+          checked={answer === option}
           onChange={event => setAnswer(event.target.value)}
-        />
-        {poll?.answerOne}
-      </Label>
-      <Label>
-        <input
-          type="radio"
+          value={option}
+          label={poll?.[option]}
           name="answer"
-          value="answerTwo"
-          checked={answer === 'answerTwo'}
-          onChange={event => setAnswer(event.target.value)}
         />
-        {poll?.answerTwo}
-      </Label>
-      <Label>
-        <input
-          type="radio"
-          name="answer"
-          value="answerThree"
-          checked={answer === 'answerThree'}
-          onChange={event => setAnswer(event.target.value)}
-        />
-        {poll?.answerThree}
-      </Label>
+      ))}
       <Button>Vote</Button>
     </Form>
   );
