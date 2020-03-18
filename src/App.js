@@ -5,6 +5,7 @@ import New from './pages/New';
 import Vote from './pages/Vote';
 import Result from './pages/Result';
 import styled from '@emotion/styled';
+import GlobalStyles from './Globalstyles';
 
 const Main = styled.main`
   display: flex;
@@ -21,6 +22,7 @@ const Section = styled.section`
 function App() {
   return (
     <Router>
+      <GlobalStyles />
       <Header />
       <Main>
         <Section>
