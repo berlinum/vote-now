@@ -9,7 +9,7 @@ const Input = styled.input`
   height: 45px;
   color: ${props => props.theme.colors.textSecondary};
   background-color: ${props => props.theme.colors.bgSecondary};
-  border: none;
+  border: 1px solid ${props => props.theme.colors.bgBorder};
   font-family: 'SF italic';
   font-size: 20px;
   padding-left: 20px;
@@ -36,7 +36,7 @@ const Label = styled.label`
   font-family: SF;
   color: ${props => props.theme.colors.textPrimary};
   &::placeholder {
-    color: ${props => props.theme.colors.textSecondary};
+    color: ${props => props.theme.colors.textSmallText};
   }
 `;
 
