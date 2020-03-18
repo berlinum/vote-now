@@ -18,6 +18,7 @@ function New() {
       question="Your question:"
       answers="Answer options:"
       onSubmit={handleSubmit}
+      button="Create poll"
     />
   );
 }

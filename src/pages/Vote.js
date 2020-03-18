@@ -10,7 +10,11 @@ const LabelQuestion = styled.label`
   margin-left: 34px;
   font-size: 30px;
   font-family: SF;
-  color: ${props => props.theme.colors.textSecondary};
+  color: ${props => props.theme.colors.textPrimary};
+`;
+
+const LabelAnswer = styled(LabelQuestion)`
+  margin: 43px 0 0 34px;
 `;
 
 const Question = styled.div`
@@ -18,15 +22,14 @@ const Question = styled.div`
   min-width: 310px;
   height: 45px;
   margin: 17px 33px 0 32px;
-  padding: 20px;
-  color: #9a9a9a;
-  background-color: #e1e1e3;
-  border: none;
-  font-family: 'SF italic';
-  font-size: 20px;
+  padding: 7px 0 0 20px;
+  color: ${props => props.theme.colors.textSecondary};
+  background-color: ${props => props.theme.colors.bgSecondary};
+  border: 1px solid ${props => props.theme.colors.bgBorder};
+  font-family: SF;
+  font-size: 23px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  align-self: center;
 `;
 
 function Vote() {
@@ -66,6 +69,7 @@ function Vote() {
     <Form onSubmit={handleSubmit}>
       <LabelQuestion>Question:</LabelQuestion>
       <Question>{poll?.question}</Question>
+      <LabelAnswer>Answer:</LabelAnswer>
       {options.map(option => (
         <RadioInput
           key={option}

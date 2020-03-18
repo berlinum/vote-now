@@ -101,7 +101,7 @@ function AppForm(props) {
           setAnswerThree(event.target.value);
         }}
       />
-      <Button>Create poll</Button>
+      <Button>{props.button}</Button>
     </Form>
   );
 }
