@@ -10,8 +10,8 @@ function New() {
       },
       body: JSON.stringify(poll)
     });
-    const createdPool = await response.json();
-    alert(`Created a new poll with ID ${createdPool.id}`);
+    const createdPoll = await response.json();
+    alert(`Created a new poll with ID ${createdPoll.id}`);
   }
   return (
     <AppForm

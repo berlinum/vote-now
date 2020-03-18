@@ -4,7 +4,7 @@ import { Global, css } from '@emotion/core';
 function GlobalStyles() {
   return (
     <Global
-      styles={css`
+      styles={theme => css`
         @font-face {
           font-family: 'SF';
           src: url('/fonts/SF-Pro-Display-Regular.otf');
@@ -20,9 +20,9 @@ function GlobalStyles() {
           flex-direction: column;
           flex-wrap: nowrap;
           margin: 0;
-          background-color: #ffffff;
+          background-color: ${theme.colors.bgPrimary};
           height: 100vh;
-          color: #707070;
+          color: ${theme.colors.textPrimary};
           font-family: SF;
         }
       `}

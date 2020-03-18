@@ -7,16 +7,16 @@ const Input = styled.input`
   box-sizing: border-box;
   min-width: 310px;
   height: 45px;
-  color: #9a9a9a;
-  background-color: #e1e1e3;
+  color: ${props => props.theme.colors.textSecondary};
+  background-color: ${props => props.theme.colors.bgSecondary};
   border: none;
   font-family: 'SF italic';
   font-size: 20px;
   padding-left: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   &:focus {
-    outline: #007aff;
-    box-shadow: 0 0 3px 2px #007aff;
+    outline: ${props => props.theme.colors.bgShadow};
+    box-shadow: 0 0 3px 2px ${props => props.theme.colors.bgShadow};
   }
 `;
 
@@ -34,9 +34,9 @@ const Label = styled.label`
   align-self: flex-start;
   font-size: 30px;
   font-family: SF;
-  color: #707070;
+  color: ${props => props.theme.colors.textPrimary};
   &::placeholder {
-    color: #9a9a9a;
+    color: ${props => props.theme.colors.textSecondary};
   }
 `;
 
