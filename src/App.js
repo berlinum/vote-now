@@ -5,7 +5,9 @@ import New from './pages/New';
 import Vote from './pages/Vote';
 import Result from './pages/Result';
 import styled from '@emotion/styled';
-import GlobalStyles from './Globalstyles';
+import GlobalStyles from './GlobalStyles';
+import { ThemeProvider } from 'emotion-theming';
+import light from './thems/light';
 
 const Main = styled.main`
   display: flex;
@@ -21,25 +23,27 @@ const Section = styled.section`
 
 function App() {
   return (
-    <Router>
-      <GlobalStyles />
-      <Header />
-      <Main>
-        <Section>
-          <Switch>
-            <Route exact path="/">
-              <New />
-            </Route>
-            <Route path="/polls/:pollId/vote">
-              <Vote />
-            </Route>
-            <Route path="/polls/:pollId">
-              <Result />
-            </Route>
-          </Switch>
-        </Section>
-      </Main>
-    </Router>
+    <ThemeProvider theme={light}>
+      <Router>
+        <GlobalStyles />
+        <Header />
+        <Main>
+          <Section>
+            <Switch>
+              <Route exact path="/">
+                <New />
+              </Route>
+              <Route path="/polls/:pollId/vote">
+                <Vote />
+              </Route>
+              <Route path="/polls/:pollId">
+                <Result />
+              </Route>
+            </Switch>
+          </Section>
+        </Main>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -8,17 +8,17 @@ const Button = styled.button`
   font-size: 20px;
   border: none;
   border-radius: 23px;
-  background-color: #ff3b30;
-  color: #fffdfd;
+  background-color: ${props => props.theme.colors.bgSuccess};
+  color: ${props => props.theme.colors.textSuccess};
   font-family: SF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   &:focus {
-    outline: #007aff;
-    box-shadow: 0 0 3px 2px #007aff;
+    outline: ${props => props.theme.colors.bgShadow};
+    box-shadow: 0 0 3px 2px ${props => props.theme.colors.bgShadow};
   }
   &:hover {
-    color: #ff3b30;
-    background-color: #fffdfd;
+    color: ${props => props.theme.colors.bgSuccess};
+    background-color: ${props => props.theme.colors.textSuccess};
     cursor: pointer;
   }
 `;

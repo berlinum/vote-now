@@ -8,7 +8,7 @@ const Header = styled.header`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40vw;
+  height: 140px;
   margin-bottom: 32px;
 `;
 
