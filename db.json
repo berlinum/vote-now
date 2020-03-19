@@ -46,7 +46,11 @@
       "answerThree": "199 bucks",
       "votes": [
         "answerThree",
-        "answerOne"
+        "answerOne",
+        null,
+        "answerOne",
+        "answerTwo",
+        "answerTwo"
       ],
       "id": 5
     },
@@ -121,6 +125,134 @@
       "answerThree": "",
       "votes": [],
       "id": 14
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 15
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 16
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 17
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 18
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 19
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 20
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 21
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 22
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 23
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 24
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 25
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 26
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 27
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 28
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 29
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 30
     }
   ]
 }

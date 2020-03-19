@@ -3,15 +3,19 @@ import styled from '@emotion/styled';
 
 const Label = styled.label`
   display: flex;
+  align-items: center;
   box-sizing: border-box;
   min-width: 310px;
   height: 45px;
   margin: 19px 32px 0 33px;
   border-radius: 23px;
   color: ${props => props.theme.colors.textSecondary};
-  background: ${props => props.theme.colors.bgPrimary};
+  background: ${props =>
+    props.checked
+      ? props => props.theme.colors.textPrimary
+      : props => props.theme.colors.bgSecondary};
   border: none;
-  font-family: 'SF italic';
+  font-family: SF;
   font-size: 20px;
   padding-left: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -32,8 +36,8 @@ const Checkmark = styled.div`
   border: 1px solid #111;
   background: ${props =>
     props.checked
-      ? props => props.theme.colors.bgActive
-      : props => props.theme.colors.bgPrimary};
+      ? props => props.theme.colors.textPrimary
+      : props => props.theme.colors.bgSecondary};
   height: 18px;
   width: 18px;
   margin-right: 8px;

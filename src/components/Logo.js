@@ -1,9 +1,9 @@
-import React from "react";
-import Vote from "./vote-now.png";
-import styled from "@emotion/styled";
+import React from 'react';
+import Vote from './vote-now.png';
+import styled from '@emotion/styled';
 
 const Img = styled.img`
-  height: 25vw;
+  height: 40vw;
 `;
 
 function Logo(props) {
