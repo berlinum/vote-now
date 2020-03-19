@@ -3,16 +3,12 @@ import AppForm from '../components/AppForm';
 import { postPoll } from '../api/polls';
 
 function New() {
+  const [isLoading, setLoading] = React.useState(false);
+
   async function handleSubmit(poll) {
+    setLoading(true);
     const createdPoll = await postPoll(poll);
-    // const response = await fetch('http://localhost:4000/polls', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(poll)
-    // });
-    // const createdPoll = await response.json();
+
     alert(`Created a new poll with ID ${createdPoll.id}`);
   }
   return (
@@ -21,6 +17,7 @@ function New() {
       answers="Answer options:"
       onSubmit={handleSubmit}
       button="Create poll"
+      disabled={isLoading}
     />
   );
 }

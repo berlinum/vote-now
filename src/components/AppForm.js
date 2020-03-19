@@ -53,6 +53,7 @@ function AppForm(props) {
   const [answerOne, setAnswerOne] = React.useState('');
   const [answerTwo, setAnswerTwo] = React.useState('');
   const [answerThree, setAnswerThree] = React.useState('');
+
   const poll = {
     question: question,
     answerOne: answerOne,
@@ -101,7 +102,7 @@ function AppForm(props) {
           setAnswerThree(event.target.value);
         }}
       />
-      <Button>{props.button}</Button>
+      <Button disabled={props.disabled}>{props.button}</Button>
     </Form>
   );
 }
