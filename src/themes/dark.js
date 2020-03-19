@@ -5,7 +5,7 @@ const light = {
     textSuccess: '#fffdfd',
     bgPrimary: '#707070',
     bgSecondary: '#9a9a9a',
-    bgActive: '#767676',
+    bgActive: '#ffffff',
     bgShadow: '#007aff',
     bgSuccess: '#ff3b30'
   }

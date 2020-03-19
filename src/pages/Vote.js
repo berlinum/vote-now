@@ -10,7 +10,7 @@ const LabelQuestion = styled.label`
   margin-left: 34px;
   font-size: 30px;
   font-family: SF;
-  color: #707070;
+  color: ${props => props.theme.colors.textSecondary};
 `;
 
 const Question = styled.div`
