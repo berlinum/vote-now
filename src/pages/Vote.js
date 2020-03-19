@@ -34,6 +34,12 @@ const Question = styled.div`
   border-radius: 10px;
 `;
 
+const Error = styled.div`
+  font-size: 30px;
+  font-family: SF;
+  color: ${props => props.theme.colors.textPrimary};
+`;
+
 function Vote() {
   const { pollId } = useParams();
   const history = useHistory();
@@ -70,7 +76,7 @@ function Vote() {
   }
 
   if (errorMessage) {
-    return <div>{errorMessage}</div>;
+    return <Error>{errorMessage}</Error>;
   }
 
   if (isLoadingGetPoll) {

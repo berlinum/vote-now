@@ -50,6 +50,12 @@ const Answers = styled.div`
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 `;
 
+const Error = styled.div`
+  font-size: 30px;
+  font-family: SF;
+  color: ${props => props.theme.colors.textPrimary};
+`;
+
 function Result() {
   const { pollId } = useParams();
   const [poll, setPoll] = React.useState(null);
@@ -78,7 +84,7 @@ function Result() {
     poll?.votes.filter(vote => vote === 'answerThree').length || 0;
 
   if (errorMessage) {
-    return <div>{errorMessage}</div>;
+    return <Error>{errorMessage}</Error>;
   }
 
   if (isLoading) {
