@@ -54,7 +54,7 @@ function Result() {
   const { pollId } = useParams();
   const [poll, setPoll] = React.useState(null);
   const [isLoading, setIsLoading] = React.useState(true);
-  const [error, setError] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
@@ -64,7 +64,7 @@ function Result() {
         setPoll(poll);
         setIsLoading(false);
       } catch (error) {
-        setError(error.message);
+        setErrorMessage(error.message);
       }
     }
     doGetPoll();
@@ -77,8 +77,8 @@ function Result() {
   const answerThreeVotes =
     poll?.votes.filter(vote => vote === 'answerThree').length || 0;
 
-  if (error) {
-    return <div>{error}</div>;
+  if (errorMessage) {
+    return <div>{errorMessage}</div>;
   }
 
   if (isLoading) {
