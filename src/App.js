@@ -23,7 +23,7 @@ const Section = styled.section`
 `;
 
 function App() {
-  const [theme, setTheme] = React.useState(dark);
+  const [theme, setTheme] = React.useState(light);
   return (
     <ThemeProvider theme={theme}>
       <Router>
