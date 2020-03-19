@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Form from '../components/Form';
 import styled from '@emotion/styled';
 import { getPoll } from '../api/polls';
+import Loading from '../components/Loading';
 
 const LabelQuestion = styled.label`
   align-self: flex-start;
@@ -49,24 +50,46 @@ const Answers = styled.div`
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 `;
 
+const Error = styled.div`
+  font-size: 30px;
+  font-family: SF;
+  color: ${props => props.theme.colors.textPrimary};
+`;
+
 function Result() {
   const { pollId } = useParams();
   const [poll, setPoll] = React.useState(null);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
-      const poll = await getPoll(pollId);
-      setPoll(poll);
+      try {
+        setIsLoading(true);
+        const poll = await getPoll(pollId);
+        setPoll(poll);
+        setIsLoading(false);
+      } catch (error) {
+        setErrorMessage(error.message);
+      }
     }
     doGetPoll();
   }, [pollId]);
 
-  const answerOneVotes = poll?.votes.filter(vote => vote === 'answerOne')
-    .length;
-  const answerTwoVotes = poll?.votes.filter(vote => vote === 'answerTwo')
-    .length;
-  const answerThreeVotes = poll?.votes.filter(vote => vote === 'answerThree')
-    .length;
+  const answerOneVotes =
+    poll?.votes.filter(vote => vote === 'answerOne').length || 0;
+  const answerTwoVotes =
+    poll?.votes.filter(vote => vote === 'answerTwo').length || 0;
+  const answerThreeVotes =
+    poll?.votes.filter(vote => vote === 'answerThree').length || 0;
+
+  if (errorMessage) {
+    return <Error>{errorMessage}</Error>;
+  }
+
+  if (isLoading) {
+    return <Loading>Loading...</Loading>;
+  }
 
   return (
     <Form>

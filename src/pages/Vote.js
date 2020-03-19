@@ -5,12 +5,7 @@ import Form from '../components/Form';
 import RadioInput from '../components/RadioInput';
 import styled from '@emotion/styled';
 import { getPoll, patchPoll } from '../api/polls';
-
-const Loading = styled.div`
-  color: ${props => props.theme.colors.textPrimary};
-  font-family: SF;
-  font-size: 30px;
-`;
+import Loading from '../components/Loading';
 
 const LabelQuestion = styled.label`
   align-self: flex-start;
@@ -39,6 +34,12 @@ const Question = styled.div`
   border-radius: 10px;
 `;
 
+const Error = styled.div`
+  font-size: 30px;
+  font-family: SF;
+  color: ${props => props.theme.colors.textPrimary};
+`;
+
 function Vote() {
   const { pollId } = useParams();
   const history = useHistory();
@@ -46,13 +47,18 @@ function Vote() {
   const [answer, setAnswer] = React.useState(null);
   const [isLoadingPatchPoll, setIsLoadingPatchPoll] = React.useState(false);
   const [isLoadingGetPoll, setIsLoadingGetPoll] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
-      setIsLoadingGetPoll(true);
-      const poll = await getPoll(pollId);
-      setPoll(poll);
-      setIsLoadingGetPoll(false);
+      try {
+        setIsLoadingGetPoll(true);
+        const poll = await getPoll(pollId);
+        setPoll(poll);
+        setIsLoadingGetPoll(false);
+      } catch (error) {
+        setErrorMessage(error.message);
+      }
     }
     doGetPoll();
     // getPoll(pollId).then(poll => setPoll(poll));
@@ -67,6 +73,10 @@ function Vote() {
 
     await patchPoll(newPoll);
     history.push(`/polls/${poll.id}`);
+  }
+
+  if (errorMessage) {
+    return <Error>{errorMessage}</Error>;
   }
 
   if (isLoadingGetPoll) {
