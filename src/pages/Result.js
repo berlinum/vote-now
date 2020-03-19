@@ -3,6 +3,7 @@ import Button from '../components/Button';
 import { useParams } from 'react-router-dom';
 import Form from '../components/Form';
 import styled from '@emotion/styled';
+import { getPoll } from '../api/polls';
 
 const LabelQuestion = styled.label`
   align-self: flex-start;
@@ -53,12 +54,11 @@ function Result() {
   const [poll, setPoll] = React.useState(null);
 
   React.useEffect(() => {
-    async function getPoll() {
-      const response = await fetch(`http://localhost:4000/polls/${pollId}`);
-      const poll = await response.json();
+    async function doGetPoll() {
+      const poll = await getPoll(pollId);
       setPoll(poll);
     }
-    getPoll();
+    doGetPoll();
   }, [pollId]);
 
   const answerOneVotes = poll?.votes.filter(vote => vote === 'answerOne')

@@ -9,7 +9,10 @@ const Label = styled.label`
   height: 45px;
   margin: 19px 32px 0 33px;
   border-radius: 23px;
-  color: ${props => props.theme.colors.textSecondary};
+  color: ${props =>
+    props.checked
+      ? props => props.theme.colors.bgSecondary
+      : props => props.theme.colors.textPrimary};
   background: ${props =>
     props.checked
       ? props => props.theme.colors.textPrimary
@@ -31,23 +34,10 @@ const Input = styled.input`
   position: absolute;
 `;
 
-const Checkmark = styled.div`
-  border-radius: 50%;
-  border: 1px solid #111;
-  background: ${props =>
-    props.checked
-      ? props => props.theme.colors.textPrimary
-      : props => props.theme.colors.bgSecondary};
-  height: 18px;
-  width: 18px;
-  margin-right: 8px;
-`;
-
 const RadioInput = ({ checked, label, ...inputProps }) => {
   return (
-    <Label>
+    <Label checked={checked}>
       <Input type="radio" checked={checked} {...inputProps} />
-      <Checkmark checked={checked} />
       {label}
     </Label>
   );

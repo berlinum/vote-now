@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import Form from '../components/Form';
 import RadioInput from '../components/RadioInput';
 import styled from '@emotion/styled';
+import { getPoll, patchPoll } from '../api/polls';
 
 const LabelQuestion = styled.label`
   align-self: flex-start;
@@ -39,12 +40,12 @@ function Vote() {
   const [answer, setAnswer] = React.useState(null);
 
   React.useEffect(() => {
-    async function getPoll() {
-      const response = await fetch(`http://localhost:4000/polls/${pollId}`);
-      const poll = await response.json();
+    async function doGetPoll() {
+      const poll = await getPoll(pollId);
       setPoll(poll);
     }
-    getPoll();
+    doGetPoll();
+    // getPoll(pollId).then(poll => setPoll(poll));
   }, [pollId]);
 
   async function handleSubmit(event) {
@@ -53,13 +54,7 @@ function Vote() {
     const newPoll = { ...poll };
     newPoll.votes.push(answer);
 
-    await fetch(`http://localhost:4000/polls/${pollId}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newPoll)
-    });
+    await patchPoll(newPoll);
     history.push(`/polls/${poll.id}`);
   }
 
