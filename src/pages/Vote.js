@@ -41,13 +41,18 @@ function Vote() {
   const [answer, setAnswer] = React.useState(null);
   const [isLoadingPatchPoll, setIsLoadingPatchPoll] = React.useState(false);
   const [isLoadingGetPoll, setIsLoadingGetPoll] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
-      setIsLoadingGetPoll(true);
-      const poll = await getPoll(pollId);
-      setPoll(poll);
-      setIsLoadingGetPoll(false);
+      try {
+        setIsLoadingGetPoll(true);
+        const poll = await getPoll(pollId);
+        setPoll(poll);
+        setIsLoadingGetPoll(false);
+      } catch (error) {
+        setErrorMessage(error.message);
+      }
     }
     doGetPoll();
     // getPoll(pollId).then(poll => setPoll(poll));
@@ -62,6 +67,10 @@ function Vote() {
 
     await patchPoll(newPoll);
     history.push(`/polls/${poll.id}`);
+  }
+
+  if (errorMessage) {
+    return <div>{errorMessage}</div>;
   }
 
   if (isLoadingGetPoll) {
