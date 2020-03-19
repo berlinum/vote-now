@@ -6,6 +6,12 @@ import RadioInput from '../components/RadioInput';
 import styled from '@emotion/styled';
 import { getPoll, patchPoll } from '../api/polls';
 
+const Loading = styled.div`
+  color: ${props => props.theme.colors.textPrimary};
+  font-family: SF;
+  font-size: 30px;
+`;
+
 const LabelQuestion = styled.label`
   align-self: flex-start;
   margin-left: 34px;
@@ -38,11 +44,15 @@ function Vote() {
   const history = useHistory();
   const [poll, setPoll] = React.useState(null);
   const [answer, setAnswer] = React.useState(null);
+  const [isLoadingPatchPoll, setIsLoadingPatchPoll] = React.useState(false);
+  const [isLoadingGetPoll, setIsLoadingGetPoll] = React.useState(false);
 
   React.useEffect(() => {
     async function doGetPoll() {
+      setIsLoadingGetPoll(true);
       const poll = await getPoll(pollId);
       setPoll(poll);
+      setIsLoadingGetPoll(false);
     }
     doGetPoll();
     // getPoll(pollId).then(poll => setPoll(poll));
@@ -50,12 +60,17 @@ function Vote() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    setIsLoadingPatchPoll(true);
 
     const newPoll = { ...poll };
     newPoll.votes.push(answer);
 
     await patchPoll(newPoll);
     history.push(`/polls/${poll.id}`);
+  }
+
+  if (isLoadingGetPoll) {
+    return <Loading>Loading...</Loading>;
   }
 
   const options = ['answerOne', 'answerTwo', 'answerThree'];
@@ -75,7 +90,7 @@ function Vote() {
           name="answer"
         />
       ))}
-      <Button>Vote</Button>
+      <Button disabled={isLoadingPatchPoll}>Vote</Button>
     </Form>
   );
 }

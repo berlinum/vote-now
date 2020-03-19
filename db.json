@@ -1,45 +1,6 @@
 {
   "polls": [
     {
-      "question": "wedw",
-      "answerOne": "wed",
-      "answerTwo": "wedwrtg",
-      "answerThree": "w434t35g",
-      "votes": [],
-      "id": 1
-    },
-    {
-      "question": "wedwervwe",
-      "answerOne": "wedvedvdfv",
-      "answerTwo": "wedwrtg",
-      "answerThree": "w434t35gsd",
-      "votes": [
-        "answerTwo"
-      ],
-      "id": 2
-    },
-    {
-      "question": "wed",
-      "answerOne": "lküpl",
-      "answerTwo": "kmoppß",
-      "answerThree": "lkmpoü",
-      "votes": [
-        "answerOne"
-      ],
-      "id": 3
-    },
-    {
-      "question": "AAAAAA",
-      "answerOne": "123",
-      "answerTwo": "234",
-      "answerThree": "345",
-      "votes": [
-        "answerTwo",
-        "answerThree"
-      ],
-      "id": 4
-    },
-    {
       "question": "How much is the cat?",
       "answerOne": "15$",
       "answerTwo": "15 Pounds",
@@ -52,67 +13,99 @@
         "answerTwo",
         "answerTwo"
       ],
+      "id": 1
+    },
+    {
+      "question": "dlsfj",
+      "answerOne": "dslfj",
+      "answerTwo": "sdlkfj",
+      "answerThree": "sdlfkj",
+      "votes": [],
+      "id": 2
+    },
+    {
+      "question": "ertert",
+      "answerOne": "rrete",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 3
+    },
+    {
+      "question": "ertert",
+      "answerOne": "rrete",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 4
+    },
+    {
+      "question": "ertert",
+      "answerOne": "rrete",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
       "id": 5
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 6
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 7
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 8
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 9
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 10
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 11
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
       "id": 12
     },
     {
-      "question": "",
-      "answerOne": "",
+      "question": "ertert",
+      "answerOne": "rrete",
       "answerTwo": "",
       "answerThree": "",
       "votes": [],
@@ -125,150 +118,6 @@
       "answerThree": "",
       "votes": [],
       "id": 14
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 15
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 16
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 17
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 18
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 19
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 20
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 21
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 22
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 23
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 24
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 25
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 26
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 27
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 28
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 29
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 30
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 31
-    },
-    {
-      "question": "",
-      "answerOne": "",
-      "answerTwo": "",
-      "answerThree": "",
-      "votes": [],
-      "id": 32
     }
   ]
 }
