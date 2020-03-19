@@ -80,7 +80,7 @@ function Vote() {
   }
 
   if (isLoadingGetPoll) {
-    return <Loading>Loading...</Loading>;
+    return <Loading />;
   }
 
   const options = ['answerOne', 'answerTwo', 'answerThree'];

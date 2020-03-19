@@ -3,7 +3,6 @@ export async function getPoll(pollId) {
   if (!response.ok) {
     throw new Error(response.statusText);
   }
-  console.log(response);
   const poll = await response.json();
   return poll;
 }
