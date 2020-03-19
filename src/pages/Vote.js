@@ -5,12 +5,7 @@ import Form from '../components/Form';
 import RadioInput from '../components/RadioInput';
 import styled from '@emotion/styled';
 import { getPoll, patchPoll } from '../api/polls';
-
-const Loading = styled.div`
-  color: ${props => props.theme.colors.textPrimary};
-  font-family: SF;
-  font-size: 30px;
-`;
+import Loading from '../components/Loading';
 
 const LabelQuestion = styled.label`
   align-self: flex-start;
