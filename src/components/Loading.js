@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const LoadigRound = styled.div`
+const Round = styled.div`
   display: inline-block;
   position: relative;
   width: 80px;
@@ -39,12 +39,12 @@ const LoadigRound = styled.div`
 `;
 const Loading = () => {
   return (
-    <LoadigRound>
+    <Round>
       <div />
       <div />
       <div />
       <div />
-    </LoadigRound>
+    </Round>
   );
 };
 

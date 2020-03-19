@@ -88,7 +88,7 @@ function Result() {
   }
 
   if (isLoading) {
-    return <Loading>Loading...</Loading>;
+    return <Loading />;
   }
 
   return (
