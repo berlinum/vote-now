@@ -118,6 +118,32 @@
       "answerThree": "",
       "votes": [],
       "id": 14
+    },
+    {
+      "question": "What kind of beer do u like?",
+      "answerOne": "Lager",
+      "answerTwo": "Malt",
+      "answerThree": "Ale",
+      "votes": [],
+      "id": 15
+    },
+    {
+      "question": "aerger",
+      "answerOne": "argerg",
+      "answerTwo": "aergaerge",
+      "answerThree": "rthjrtjhtez",
+      "votes": [
+        "answerOne"
+      ],
+      "id": 16
+    },
+    {
+      "question": "",
+      "answerOne": "",
+      "answerTwo": "",
+      "answerThree": "",
+      "votes": [],
+      "id": 17
     }
   ]
 }

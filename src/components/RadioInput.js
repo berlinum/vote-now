@@ -12,7 +12,7 @@ const Label = styled.label`
   color: ${props =>
     props.checked
       ? props => props.theme.colors.bgSecondary
-      : props => props.theme.colors.textPrimary};
+      : props => props.theme.colors.textSecondary};
   background: ${props =>
     props.checked
       ? props => props.theme.colors.textPrimary
