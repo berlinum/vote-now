@@ -71,7 +71,7 @@ function Vote() {
     const newPoll = { ...poll };
     newPoll.votes.push(answer);
 
-    await patchPoll(newPoll);
+    await patchPoll(pollId, newPoll);
     history.push(`/polls/${poll.id}`);
   }
 

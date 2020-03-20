@@ -3,8 +3,8 @@ import Button from '../components/Button';
 import { useParams } from 'react-router-dom';
 import Form from '../components/Form';
 import styled from '@emotion/styled';
-import { getPoll } from '../api/polls';
 import Loading from '../components/Loading';
+import useGetPoll from '../hooks/useGetPoll';
 
 const LabelQuestion = styled.label`
   align-self: flex-start;
@@ -58,23 +58,7 @@ const Error = styled.div`
 
 function Result() {
   const { pollId } = useParams();
-  const [poll, setPoll] = React.useState(null);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [errorMessage, setErrorMessage] = React.useState(false);
-
-  React.useEffect(() => {
-    async function doGetPoll() {
-      try {
-        setIsLoading(true);
-        const poll = await getPoll(pollId);
-        setPoll(poll);
-        setIsLoading(false);
-      } catch (error) {
-        setErrorMessage(error.message);
-      }
-    }
-    doGetPoll();
-  }, [pollId]);
+  const { poll, isLoading, errorMessage } = useGetPoll(pollId);
 
   const answerOneVotes =
     poll?.votes.filter(vote => vote === 'answerOne').length || 0;
